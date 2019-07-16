@@ -1,11 +1,16 @@
 <div class="container">
+
+  <%= link_to 'Crear Nueva Película', new_api_v1_movie_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+  <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+
   <div class="row">
     <% @movies.each do |movie|%>
       <div class="card col-md-3" style="width: 18rem;">
         <img src="<%= movie.url_movie%>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
       </div>
     <%end%>
   </div>
