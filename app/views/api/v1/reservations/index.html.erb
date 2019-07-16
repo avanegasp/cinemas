@@ -1,0 +1,26 @@
+<div class="container">
+  <table class="table table-striped">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Película</th>
+          <th scope="col">Nombre reservante</th>
+          <th scope="col">Correo Electrónico</th>
+          <th scope="col">Cédula</th>
+          <th scope="col">Celular</th>
+        </tr>
+      </thead>
+      <tbody>
+          <%@reservations.each do |reservation|%>
+          <tr>
+              <td><%= reservation.movie.name_movie%></td>
+              <td><%= reservation.name%></td>
+              <td><%= reservation.email%></td>
+              <td><%= reservation.identification_card%></td>
+              <td><%= reservation.phone%></td>
+            <%end%>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
